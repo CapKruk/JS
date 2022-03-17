@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+   <script language="JavaScript">
+  <!--//
+
+    function pr(obj) {
+      var u = 1, S = 1;
+      var x = obj.x.value;
+      var n = obj.n.value;
+
+      for (i = 1; i <= 6; i++) {
+        u *= x / i;
+        S += u;  
+      }
+      obj.answer.value = S;
+    }
+
+  //-->
+  </script>
+
+</head>
+<body>
+  <div id="container">
+
+  	<div id="header"><h1>Программируем на JavaScript</h1></div>
+
+  	<div id="left">
+      <p class=menutitle>Численные методы</p>
+
+		<div id=menu>
+			<UL>
+  				<LI><A href="index.html">Главная</A> 
+  				<LI><A href="1.html">Вычисление перемещения</A> 
+  				<LI><A href="2.html">Определение max элемента массива</A> 
+  				<LI><A href="3.html">Удаление элемента массива</A> 
+  				<LI><A href="4.html">Сумма элементов последовательности</A> 
+   				<LI><A href="5.html">Вычисление факториала </A> 
+  				<LI><A href="6.html">Определение nod</A> 
+  				<LI><A href="7.html">Совершенные числа</A> 
+  				<LI><A href="8.html">Дружественные числа</A> 
+  				<LI><A href="9.html">Числа Фибоначчи</A> 
+			</UL>
+
+		</div>
+
+  	</div>
+
+    <div id="content">
+      <h2>Сумма элементов последовательности</h2>
+
+      <form name="form1">
+        <p>Введите натуральное число х: <input type="text" name="x" size="8"></p>
+        <p>Введите число элементов n: <input type="text" name="n" size="8"></p>
+        <p>Вычисленная сумма: <input type="text" name="answer" size="12">
+           <input type="button" value="Вычислить" onClick="pr(form1)">
+           <input type="reset" name="Сброс"></p>  
+      </form>
+
+      <pre class="hljs" style="display: block; overflow-x: auto; background: rgb(34, 34, 27); color: rgb(146, 145, 129); padding: 0.5em; width: 70%;"><span class="hljs-meta" style="color: rgb(174, 115, 19);">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta" style="color: rgb(174, 115, 19);">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iomanip&gt;</span></span>
+<span class="hljs-keyword" style="color: rgb(95, 145, 130);">using</span> <span class="hljs-keyword" style="color: rgb(95, 145, 130);">namespace</span> <span class="hljs-built_in" style="color: rgb(174, 115, 19);">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(95, 145, 130);">int</span> <span class="hljs-title" style="color: rgb(54, 161, 102);">main</span><span class="hljs-params" style="color: rgb(174, 115, 19);">()</span> </span>{ 
+  setlocale(LC_ALL, <span class="hljs-string" style="color: rgb(125, 151, 38);">"Russian"</span>);
+  
+  <span class="hljs-keyword" style="color: rgb(95, 145, 130);">double</span> u = <span class="hljs-number" style="color: rgb(174, 115, 19);">1</span>, S = <span class="hljs-number" style="color: rgb(174, 115, 19);">1</span>, n, x;
+  
+  <span class="hljs-built_in" style="color: rgb(174, 115, 19);">cout</span> &lt;&lt; <span class="hljs-string" style="color: rgb(125, 151, 38);">"Введите натуральное число х"</span> &lt;&lt; <span class="hljs-built_in" style="color: rgb(174, 115, 19);">endl</span>;
+  <span class="hljs-built_in" style="color: rgb(174, 115, 19);">cin</span> &gt;&gt; x;
+  
+  <span class="hljs-built_in" style="color: rgb(174, 115, 19);">cout</span> &lt;&lt; <span class="hljs-string" style="color: rgb(125, 151, 38);">"Введите число элементов n"</span> &lt;&lt; <span class="hljs-built_in" style="color: rgb(174, 115, 19);">endl</span>;
+  <span class="hljs-built_in" style="color: rgb(174, 115, 19);">cin</span> &gt;&gt; n;
+  
+  <span class="hljs-keyword" style="color: rgb(95, 145, 130);">for</span> (<span class="hljs-keyword" style="color: rgb(95, 145, 130);">int</span> i = <span class="hljs-number" style="color: rgb(174, 115, 19);">1</span>; i &lt;= n; i++) {
+    u *= x / i;
+    S +=u;
+  }
+  
+  <span class="hljs-built_in" style="color: rgb(174, 115, 19);">cout</span> &lt;&lt; <span class="hljs-string" style="color: rgb(125, 151, 38);">"Вычисленная сумма"</span> &lt;&lt; <span class="hljs-built_in" style="color: rgb(174, 115, 19);">endl</span> &lt;&lt; setprecision(<span class="hljs-number" style="color: rgb(174, 115, 19);">5</span>) &lt;&lt; S &lt;&lt; <span class="hljs-built_in" style="color: rgb(174, 115, 19);">endl</span>;
+  <span class="hljs-keyword" style="color: rgb(95, 145, 130);">return</span> <span class="hljs-number" style="color: rgb(174, 115, 19);">0</span>;    
+}
+</pre>
+
+    </div>
+   <div id="clear"></div>
+
+   <div id="footer" align="center">©Крючков</div>
+
+  </div>
+
+</body>
+</html>

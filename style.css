@@ -1,0 +1,149 @@
+
+p{
+	margin: 0px;
+}
+
+h2{
+	margin: 0px;
+	text-align: left;
+	color: #A0A0FF;
+}
+
+#bold {
+	font-size: 22px;
+}
+
+table{
+	border: 1px solid black;
+	width: 75%;
+	border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+
+}
+
+body, html {
+margin:0px; /*Это хорошая практика обнулять поля и отсупы, т.к. различные браузеры их по-разному воспринимают. */
+padding:0px;
+text-align:center; /*Выравниваем макет по центру в старых версиях браузеров */
+color: black;
+font-size: 20px;
+}
+#container{
+margin:0 auto;  /*выравниваем макет по центру в современных браузерах */
+text-align:left;  /*Отменяем tex-align:center заданное в Body. Делаем чтобы весь текст в макете выравнивался по левому краю */
+min-width:550px;  /*задаем минимальную ширину макета в современных браузерах */
+width:expression(   /*задаем минимальную ширину макета в старых версия браузера. Просто замените цифру на свою шиирину :) */
+(document.compatMode && document.compatMode == 'CSS1Compat')
+?
+(
+document.documentElement.clientWidth < 550
+?
+"550px"
+:
+"auto"
+)
+:
+(
+document.body.clientWidth < 550
+?
+"550px"
+:
+"auto"
+)
+);
+}
+/*Здесь пишем стили для шапки сайта */
+#header{
+background-color:#F0F0FF;
+color: #A0A0FF;
+}
+#header h1 {
+	margin: 0; /* Обнуляем отступы для заголовка первого уровня, находящегося в шапке. Это нужно обязательно делать, при использовании заголовков. Если используются параграфы, то тоже нужно обнулить отступы для них. */
+	padding: 10px 0; /* Задаем поля */
+}
+/*Здесь пишем стили для левой колонки сайта */
+#left{
+background-color:#FCFCFF;
+width:150px;  /*ширина колонки */
+float:left;  /*обязательное выравнивание по левому краю, с включением обтекания*/
+}
+
+/*Здесь пишем стили для блока контента */
+#content{
+background-color:white;
+margin:0px; /*обнуляем отступы сверху и снизу*/
+margin-left:152px; /*обязательный отступ слева, должен быть немного больше ширины левой колонки */
+}
+#content h1 {
+margin:0px; /* Обнуляем отступы для заголовка первого уровня, находящегося в блоке контента.*/
+} 
+#content p {
+margin:0px; /* Обнуляем отступы для параграфов я, находящегося в блоке контента.*/
+padding:5px; /*задаем поля, т.е. чтобы был промежуток между строками, чтобы было понятно, что это параграф :)*/
+}
+/*атрибут, который опускает подвал сайта ниже всех блоков. Нужен для корректной работы макета. */
+#clear{
+height:0;
+font-size:1px;
+line-height:0px;
+clear:both;
+}
+/*Здесь пишем стили для подвала сайта */
+#footer{
+background-color:#F0F0FF;
+color:#A0A0FF;
+}
+#footer p{
+margin:0px;  /* обнуляем отступы*/
+padding: 10px 0; /*  задаем поля */
+}
+
+.menutitle {
+	FONT-WEIGHT: bold;
+	 FONT-SIZE: 1.05em;
+	  PADDING-BOTTOM: 5px;
+	   COLOR: #A0A0FF; 
+	   PADDING-TOP: 3px;
+	     LETTER-SPACING: 0.15em;
+	     TEXT-ALIGN: center;
+	       background-color:#F0F0FF; 
+	       MARGIN: 3px; }
+
+#menu {
+	FLOAT: left;  PADDING-TOP: 0px; TEXT-ALIGN: left;}
+#menu A {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; TEXT-DECORATION: none;}
+#menu A:hover {
+	TEXT-DECORATION: underline;}
+#menu UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left;}
+#menu LI {
+	BORDER-RIGHT: #b1bdfd 0px solid;
+	 PADDING-RIGHT: 20px;
+	  BORDER-TOP: #b1bdfd 0px solid;
+	   PADDING-LEFT: 7px;
+	    PADDING-BOTTOM: 5px; MARGIN: 0px;
+	     BORDER-LEFT: #b1bdfd 0px solid;
+	      PADDING-TOP: 7px;
+	 BORDER-BOTTOM: #ffffff 1px solid;}
+
+hr{
+	background-color: #A0A0FF;
+}
+
+#content a {
+	color: green;
+	text-decoration: none;
+}
+
+#content a:hover {
+  color: #4E5822;
+  font-weight: 600;
+  padding-left: 40%;
+  font-size: 50px;
+  font-family: gothic;
+  text-decoration: underline;
+}

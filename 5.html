@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+   <script language="JavaScript">
+  <!--//
+    
+    function fact(obj) {
+      var n = obj.data.value, p = 1;
+      if (n == 0) obj.res.value = 1;
+
+      else {
+        for (i = 1; i <= n; i++) p *= i;  
+        obj.res.value = p; 
+      }
+    }
+
+  //-->
+  </script>
+
+</head>
+<body>
+  <div id="container">
+
+  	<div id="header"><h1>Программируем на JavaScript</h1></div>
+
+  	<div id="left">
+      <p class=menutitle>Численные методы</p>
+
+		<div id=menu>
+			<UL>
+  				<LI><A href="index.html">Главная</A> 
+  				<LI><A href="1.html">Вычисление перемещения</A> 
+  				<LI><A href="2.html">Определение max элемента массива</A> 
+  				<LI><A href="3.html">Удаление элемента массива</A> 
+  				<LI><A href="4.html">Сумма элементов последовательности</A> 
+   				<LI><A href="5.html">Вычисление факториала</A> 
+  				<LI><A href="6.html">Определение nod</A> 
+  				<LI><A href="7.html">Совершенные числа</A> 
+  				<LI><A href="8.html">Дружественные числа</A> 
+  				<LI><A href="9.html">Числа Фибоначчи</A> 
+			</UL>
+
+		</div>
+
+  	</div>
+
+    <div id="content">
+      <h2>Вычисление факториала</h2>
+
+      <form name="form1">
+        <p>Введите натуральное число: <input type="text" name="data" size="10"></p>
+        <p>Значение факториала: <input type="text" name="res" size="10"></p>
+        <p><input type="button" value="Вычислить" onClick="fact(form1)"> <input type="button" value="Сброс" onClick="location.reload();"></p>
+      </form>
+
+      <a href="prog/fact.cpp" target="_blank">C++ code</a>
+
+    </div>
+   <div id="clear"></div>
+
+   <div id="footer" align="center">©Крючков</div>
+
+  </div>
+
+</body>
+</html>
